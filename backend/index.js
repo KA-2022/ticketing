@@ -17,19 +17,6 @@ const router = express.Router();
 router.use("/api", api);
 app.use(router);
 
-app.use((req, res, next) => {
-    req.method = "GET";
-    next();
-});
-
-const _app_folder = "./frontend/dist/frontend";
-
-app.get("*.*", express.static(_app_folder, { maxAge: "1y" }));
-app.all("*", (req, res) => {
-    res.status(200).sendFile("/", { root: _app_folder });
-});
-
-
 http.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
+    console.log(`Server running on port ${port}`);
+})

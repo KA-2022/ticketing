@@ -1,0 +1,32 @@
+{
+    "restoreTerminals.terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "backend",
+                    "commands": [
+                        "cd backend && npm run dev"
+                    ]
+                }
+            ]
+        },
+        {
+            "splitTerminals": [
+                {
+                    "name": "frontend",
+                    "commands": [
+                        "cd frontend && ng serve"
+                    ]
+                }
+            ]
+        },
+        {
+            "splitTerminals": [
+                {
+                    "name": "zsh",
+                    "commands": []
+                }
+            ]
+        }
+    ]
+}
