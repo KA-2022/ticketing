@@ -1,6 +1,7 @@
 `use strict`
 
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const http = require("http").createServer(app);
 
@@ -11,6 +12,7 @@ require("dotenv").config({
 const port = process.env.PORT || 8000;
 
 app.enable("trust-proxy");
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
