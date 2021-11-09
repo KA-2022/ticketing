@@ -1,4 +1,4 @@
-console.log(process.env.STRIPE_SECRET_KEY);
+`use strict`
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const { Router } = require('express');
