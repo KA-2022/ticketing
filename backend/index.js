@@ -17,6 +17,10 @@ const router = express.Router();
 router.use("/api", api);
 app.use(router);
 
+app.get("/", (req, res) => {
+    res.send("Hello, world!");
+})
+
 http.listen(port, () => {
     console.log(`Server running on port ${port}`);
 })
